@@ -38,7 +38,7 @@ def purgeFiles(dir, age):
  	for xfile in os.listdir(dir):
  		today = time.time()
  		fileloc = os.path.join(dir, xfile)
- 		modified = os.stat(filepath).st_mtime
+ 		modified = os.stat(fileloc).st_mtime
 #  		
         if modified < today - age: 
  			if os.path.isfile(fileloc):
